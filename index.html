@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cursor Damage Arena</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
+
+
   <div id="game">
 
-    <section id="hud" aria-label="Game status">
+    <section id="hud">
       <div>
         <span>Currency</span>
         <strong id="currency">0</strong>
@@ -26,26 +28,22 @@
     </section>
 
     <main id="main-area">
-      <div id="cursor-circle"></div>
-      <div id="base" aria-label="Core">
-        <span class="core-eye core-eye-left" aria-hidden="true"></span>
-        <span class="core-eye core-eye-right" aria-hidden="true"></span>
-        <span class="core-mouth" aria-hidden="true"></span>
+
+      <div id="base">
+        <span class="core-eye core-eye-left"></span>
+        <span class="core-eye core-eye-right"></span>
+        <span class="core-mouth"></span>
       </div>
 
-      <div id="message" class="show">
-        <span id="message-title">Move your cursor over enemies to burn them down</span>
-        <span id="message-detail"></span>
-      </div>
     </main>
     
-    <section id="upgrade-panel" aria-label="Choose an upgrade">
+    <section id="upgrade-panel">
       <h2 id="upgrade-title">Choose an upgrade</h2>
       <p id="run-summary">Currency: 0</p>
       <div id="upgrade-options"></div>
     </section>
 
-    <template id="enemy-template">
+    <template id="enemy-one">
       <div class="enemy">
         <span class="enemy-eye enemy-eye-left"></span>
         <span class="enemy-eye enemy-eye-right"></span>
@@ -79,7 +77,7 @@
 
   </div>
 
-  <script type="module" src="src/main.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>

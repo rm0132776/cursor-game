@@ -22,7 +22,6 @@ body {
 
 #main-area {
   position: relative;
-  cursor: none;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0)),
     #e8f1eb;
@@ -94,12 +93,11 @@ body {
   border: 3px solid #243a36;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.78) 0 12%, transparent 13%),
+    radial-gradient(0 12%, transparent 13%),
     #f6d96f;
   box-shadow:
     inset -8px -10px 14px rgba(118, 88, 25, 0.18),
-    0 0 0 10px rgba(46, 92, 82, 0.1);
-  color: #243a36;
+    0 0 0 10px rgba(255, 255, 0, 0.2);
   transform: translate(-50%, -50%);
 }
 
@@ -319,18 +317,6 @@ body {
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
-#message:not(.show) {
-  opacity: 0;
-  transform: translate(-50%, 10px);
-}
-
-#message span {
-  display: inline-block;
-  margin-top: 6px;
-  color: #6a231f;
-  font-size: 14px;
-}
-
 @keyframes burst {
   from {
     opacity: 0.9;
@@ -385,11 +371,6 @@ body {
     padding: 8px 6px;
   }
 
-  #base {
-    width: 92px;
-    height: 92px;
-  }
-
   #message {
     width: calc(100% - 28px);
   }
@@ -398,3 +379,5 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+

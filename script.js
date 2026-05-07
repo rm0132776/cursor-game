@@ -591,3 +591,23 @@ const elements = getElements();
 const game = createGameController(elements);
 
 game.start();
+
+
+
+
+
+const lightLayer = document.getElementById("lightLayer");
+
+document.addEventListener("click", (event) => {
+  const light = document.createElement("div");
+
+  light.classList.add("light-burst");
+  light.style.left = `${event.clientX}px`;
+  light.style.top = `${event.clientY}px`;
+
+  lightLayer.appendChild(light);
+
+  light.addEventListener("animationend", () => {
+    light.remove();
+  });
+});
