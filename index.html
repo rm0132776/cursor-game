@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursor of Death</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursor Damage Arena</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    
-    <div id="test">Test</div>
 
-    <script src="script.js"></script>
+<body>
+  <div id="game">
+
+    <section id="hud" aria-label="Game status">
+      <div>
+        <span>Currency</span>
+        <strong id="currency">0</strong>
+      </div>
+      <div>
+        <span>Health</span>
+        <strong id="base-health">100</strong>
+      </div>
+      <div>
+        <span>Wave</span>
+        <strong id="wave">1</strong>
+      </div>
+    </section>
+
+    <main id="main-area">
+      <div id="cursor-circle"></div>
+      <div id="base" aria-label="Core">
+        <span class="core-eye core-eye-left" aria-hidden="true"></span>
+        <span class="core-eye core-eye-right" aria-hidden="true"></span>
+        <span class="core-mouth" aria-hidden="true"></span>
+      </div>
+
+      <div id="message" class="show">
+        <span id="message-title">Move your cursor over enemies to burn them down</span>
+        <span id="message-detail"></span>
+      </div>
+    </main>
+    
+    <section id="upgrade-panel" aria-label="Choose an upgrade">
+      <h2 id="upgrade-title">Choose an upgrade</h2>
+      <p id="run-summary">Currency: 0</p>
+      <div id="upgrade-options"></div>
+    </section>
+
+    <template id="enemy-template">
+      <div class="enemy">
+        <span class="enemy-eye enemy-eye-left"></span>
+        <span class="enemy-eye enemy-eye-right"></span>
+        <div class="enemy-health"></div>
+      </div>
+    </template>
+
+    <template id="upgrade-card-template">
+      <button class="upgrade-card" type="button">
+        <strong></strong>
+        <span></span>
+        <small></small>
+      </button>
+    </template>
+
+    <template id="continue-card-template">
+      <button class="upgrade-card continue-card" type="button">
+        <strong></strong>
+        <span></span>
+        <small></small>
+      </button>
+    </template>
+
+    <template id="burst-template">
+      <div class="burst"></div>
+    </template>
+
+    <template id="pulse-hit-template">
+      <div class="pulse-hit"></div>
+    </template>
+
+  </div>
+
+  <script type="module" src="src/main.js"></script>
 </body>
+
 </html>
