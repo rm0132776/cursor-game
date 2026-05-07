@@ -17,16 +17,16 @@ body {
   height: 100vh;
   position: relative;
   display: grid;
-  background: #eff5f1;
+  background: #ffffff;
 }
 
 #main-area {
   position: relative;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0)),
-    #e8f1eb;
+    #071325;
   overflow: hidden;
-  background-image: radial-gradient(#b7c8bd 1.5px, transparent 1.5px);
+  background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px);
   background-size: 25px 25px;
 }
 
